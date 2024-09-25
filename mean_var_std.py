@@ -4,10 +4,8 @@ def calculate(input_list):
     if len(input_list) != 9:
         raise ValueError("List must contain nine numbers.")
     
-    # Convert the list into a 3x3 NumPy array
     matrix = np.array(input_list).reshape(3, 3)
     
-    # Prepare the dictionary to store the results
     calculations = {
         'mean': [
             np.mean(matrix, axis=0).tolist(),  # Mean along axis 1 (columns)
